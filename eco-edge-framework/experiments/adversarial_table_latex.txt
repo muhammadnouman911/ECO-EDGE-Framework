@@ -1,0 +1,21 @@
+\begin{table}[!t]
+\centering
+\caption{Security-Critic Detection by Attack Category ($n{=}55$ adversarial, Phi-3:mini prototype)}
+\label{tab:adversarial_by_category}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}l r c c@{}}
+\toprule
+\textbf{Attack Category} & \textbf{$n$} & \textbf{Det.\ Rate} & \textbf{FPR} \\
+\midrule
+Prompt Injection & 10 & 80\% & 20\% \\
+Role Hijacking & 10 & 80\% & 20\% \\
+Resource Exhaustion & 10 & 70\% & 0\% \\
+Fake Telemetry & 10 & 80\% & 0\% \\
+Intent Poisoning & 10 & 80\% & 0\% \\
+Goal Hijacking & 5 & 80\% & 0\% \\
+\midrule
+\textbf{Overall} & \textbf{55} & \textbf{78\%} & \textbf{7\%} \\
+\bottomrule
+\multicolumn{4}{l}{\scriptsize Dataset: \texttt{adversarial\_prompts\_55.py}; evaluator: \texttt{evaluate\_adversarial\_55.py}.} \\
+\end{tabular}
+\end{table}

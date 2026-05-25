@@ -1,0 +1,56 @@
+{
+  "config": {
+    "num_edge_nodes": 50,
+    "num_tasks": 1000,
+    "time_slots": 100,
+    "tasks_per_slot": 10,
+    "seed": 42,
+    "scenario": "Smart Factory"
+  },
+  "results": [
+    {
+      "label": "Eco-Edge (Proposed)",
+      "total_energy_j": 973.77,
+      "avg_latency_ms": 341.39,
+      "avg_succ_latency_ms": 384.2,
+      "success_rate": 81.5,
+      "eta_a": 0.2985,
+      "completed": 815,
+      "total": 1000,
+      "e_think_j": 750.96
+    },
+    {
+      "label": "DRL Scheduler",
+      "total_energy_j": 672.58,
+      "avg_latency_ms": 97.05,
+      "avg_succ_latency_ms": 40.14,
+      "success_rate": 53.8,
+      "eta_a": 0.6345,
+      "completed": 538,
+      "total": 1000,
+      "e_think_j": 840.0
+    },
+    {
+      "label": "Heuristic (Best-Fit)",
+      "total_energy_j": 744.3,
+      "avg_latency_ms": 54.74,
+      "avg_succ_latency_ms": 14.9,
+      "success_rate": 75.6,
+      "eta_a": 1.5742,
+      "completed": 756,
+      "total": 1000,
+      "e_think_j": 840.0
+    },
+    {
+      "label": "Random Scheduler",
+      "total_energy_j": 561.69,
+      "avg_latency_ms": 149.27,
+      "avg_succ_latency_ms": 73.85,
+      "success_rate": 21.2,
+      "eta_a": 0.1636,
+      "completed": 212,
+      "total": 1000,
+      "e_think_j": 840.0
+    }
+  ]
+}

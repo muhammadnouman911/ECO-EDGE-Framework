@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  eco-edge-prototype:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Run the experiment and keep the container open if needed for inspection
+    command: python experiments/run_experiment.py

@@ -1,0 +1,146 @@
+{
+ "lambda": 0.3,
+ "w1": 1.0,
+ "w2": 0.18396226415094338,
+ "eps": 0.05,
+ "E_exec": 0.6,
+ "E_cap": 10800.0,
+ "P_kappa": [
+  0.59975,
+  0.2661125,
+  0.1341375
+ ],
+ "G": [
+  [
+   0.5493705710712797,
+   0.65,
+   0.65
+  ],
+  [
+   0.13718849520633597,
+   0.82,
+   0.82
+  ],
+  [
+   0.0,
+   0.0,
+   0.95
+  ]
+ ],
+ "nbins": 400,
+ "greedy_thresholds": {
+  "fast": [],
+  "mid": [
+   [
+    0.124,
+    "0.5B",
+    "1.1B"
+   ]
+  ],
+  "slow": [
+   [
+    0.124,
+    "0.5B",
+    "1.1B"
+   ],
+   [
+    0.701,
+    "1.1B",
+    "2.7B"
+   ]
+  ]
+ },
+ "gamma_0.99": {
+  "iters": 2016,
+  "vi_thresholds": {
+   "fast": [],
+   "mid": [
+    [
+     0.124,
+     "0.5B",
+     "1.1B"
+    ]
+   ],
+   "slow": [
+    [
+     0.124,
+     "0.5B",
+     "1.1B"
+    ],
+    [
+     0.701,
+     "1.1B",
+     "2.7B"
+    ]
+   ]
+  },
+  "policy_diff_vs_greedy_frac": 0.0,
+  "policy_diff_vs_configured_frac": 0.11833333333333333,
+  "value_gap_greedy_pct": 0.0,
+  "value_gap_configured_pct": 0.7275320814295533,
+  "max_value_gap_greedy_pct": 0.0,
+  "max_value_gap_configured_pct": 6.289078553993016
+ },
+ "gamma_0.999": {
+  "iters": 20244,
+  "vi_thresholds": {
+   "fast": [],
+   "mid": [
+    [
+     0.124,
+     "0.5B",
+     "1.1B"
+    ]
+   ],
+   "slow": [
+    [
+     0.124,
+     "0.5B",
+     "1.1B"
+    ],
+    [
+     0.701,
+     "1.1B",
+     "2.7B"
+    ]
+   ]
+  },
+  "policy_diff_vs_greedy_frac": 0.0,
+  "policy_diff_vs_configured_frac": 0.11833333333333333,
+  "value_gap_greedy_pct": 0.0,
+  "value_gap_configured_pct": 0.7275320814294906,
+  "max_value_gap_greedy_pct": 0.0,
+  "max_value_gap_configured_pct": 6.289078553995489
+ },
+ "gamma_0.9999": {
+  "iters": 99999,
+  "vi_thresholds": {
+   "fast": [],
+   "mid": [
+    [
+     0.124,
+     "0.5B",
+     "1.1B"
+    ]
+   ],
+   "slow": [
+    [
+     0.124,
+     "0.5B",
+     "1.1B"
+    ],
+    [
+     0.701,
+     "1.1B",
+     "2.7B"
+    ]
+   ]
+  },
+  "policy_diff_vs_greedy_frac": 0.0,
+  "policy_diff_vs_configured_frac": 0.11833333333333333,
+  "value_gap_greedy_pct": 0.0,
+  "value_gap_configured_pct": 0.7275320814303016,
+  "max_value_gap_greedy_pct": 0.0,
+  "max_value_gap_configured_pct": 6.289078553993177
+ }
+}

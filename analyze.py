@@ -200,10 +200,10 @@ def main(a):
 
     # ---------------------------------------------------------- ablation
     A = agg(abl, ["algo"], METRICS)
-    order = ["A_full", "B_no_elastic", "B2_fixed_0.5B", "B3_soc_only", "C_no_security", "D_no_critic",
+    order = ["A_full", "B_no_elastic", "B2_fixed_0.5B", "B3_soc_only", "H_vi_optimal", "C_no_security", "D_no_critic",
              "E_no_twin", "F_no_affinity", "G_no_critic_no_twin"]
     ALAB = {"A_full": "Full Eco-Edge", "B_no_elastic": "No Elastic (fixed 2.7B)", "B2_fixed_0.5B": "Fixed 0.5B tier",
-            "B3_soc_only": "SoC-only tier policy", "C_no_security": "No Security-Critic", "D_no_critic": "No Critic",
+            "B3_soc_only": "SoC-only tier policy", "H_vi_optimal": "VI-optimal thresholds (0.12, 0.70)", "C_no_security": "No Security-Critic", "D_no_critic": "No Critic",
             "E_no_twin": "No Digital Twin", "F_no_affinity": "No Role-Affinity", "G_no_critic_no_twin": "No Critic + No Twin"}
     al_lines = []
     full = A[("A_full",)]

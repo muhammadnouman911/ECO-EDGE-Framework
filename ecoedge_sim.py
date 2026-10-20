@@ -86,6 +86,7 @@ class Config:
     use_twin: bool = True
     use_affinity: bool = True
     fixed_tier: str = "2.7B"               # tier when elastic is off
+    twin_noise: float = 0.0                # relative error of the digital twin's queue/busy-time state (0 = exact; sensitivity)
 
 
 @dataclass
@@ -336,8 +337,15 @@ class EcoEdge:
             # tier-dependent estimate of the slot-start snapshot
             q_true = env.qlen(s, t_ready)
             if cfg.use_twin:
-                q_obs = q_true
-                busy_obs = env.busy_until[s]
+                if cfg.twin_noise > 0:
+                    # twin state error: relative error on the queue length and on the
+                    # residual busy time of the server (not on the absolute timestamp)
+                    q_obs = max(0.0, q_true * (1.0 + self.rng.normal(0, cfg.twin_noise)))
+                    resid = max(0.0, env.busy_until[s] - t_ready)
+                    busy_obs = t_ready + resid * (1.0 + self.rng.normal(0, cfg.twin_noise))
+                else:
+                    q_obs = q_true
+                    busy_obs = env.busy_until[s]
             else:
                 q_obs = max(0.0, q_true * (1.0 + self.rng.normal(0, noise)))
                 busy_obs = env.busy_until[s] * (1.0 + self.rng.normal(0, noise))
